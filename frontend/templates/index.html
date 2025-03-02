@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DevOps AI Assistant</h1>
+        <form method="post" action="/query">
+            <input type="text" name="query" placeholder="Enter your DevOps query" required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if result %}
+        <div class="response">
+            <h3>Response:</h3>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
